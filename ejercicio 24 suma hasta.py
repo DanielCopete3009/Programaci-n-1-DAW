@@ -1,6 +1,6 @@
 suma = 0
 
-# Iniciamos el ciclo, donde seguimos pidiendo números hasta que el usuario ingrese 0
+# Iniciamos el bucle donde seguimos pidiendo números hasta que el usuario ingrese 0
 while True:
     
     numero = int(input("Ingresa un número (0 para terminar): "))
@@ -12,3 +12,4 @@ while True:
 
 
 print("La suma total es:", suma)
+
