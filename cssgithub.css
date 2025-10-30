@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    color: #e6edf3;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #161b22;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #30363d;
+}
+
+header h1 {
+    margin: 0;
+    color: #58a6ff;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #0d1117;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+section {
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #30363d;
+}
+
+h2 {
+    color: #58a6ff;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #79c0ff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: #58a6ff;
+    text-decoration: none;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+a:hover {
+    color: #79c0ff;
+    text-decoration: underline;
+}
+
+code, pre {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 5px;
+    padding: 10px;
+    display: block;
+    color: #d2a8ff;
+    overflow-x: auto;
+    margin: 10px 0;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #161b22;
+    border-top: 2px solid #30363d;
+    color: #8b949e;
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.4em;
+    }
+}
