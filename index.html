@@ -32,7 +32,17 @@
         }
 
         section {
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            color: #58a6ff;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #79c0ff;
         }
 
         ul {
@@ -53,6 +63,17 @@
             text-decoration: underline;
         }
 
+        code, pre {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 5px;
+            padding: 10px;
+            display: block;
+            color: #d2a8ff;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+
         footer {
             text-align: center;
             padding: 15px;
@@ -66,31 +87,76 @@
 <body>
     <header>
         <h1>Mi Portfolio de Python</h1>
-        <p>Por aquí voy a dejar todos los ejercicios de programación</p>
+        <p>Ejercicios y conceptos de programación</p>
     </header>
 
     <main>
-        <section>
-            <h2>Enlaces de interés</h2>
+        <!-- Unidad 1 -->
+        <section id="unidad1">
+            <h2>Unidad 1 - Conceptos básicos</h2>
+
+            <h3>Teoría</h3>
+            <p>
+                Aquí puedes explicar la estructura de un programa, tipos de variables, operadores y conversiones de tipo.
+            </p>
+            <pre><code># Ejemplo de variables en Python
+nombre = "Ana"
+edad = 20
+print(f"{nombre} tiene {edad} años.")
+</code></pre>
+
+            <h3>Ejercicios</h3>
             <ul>
-                <li><a href="https://github.com/DanielCopete3009/Programaci-n-1-DAW" target="_blank">Repositorio de Python</a></li>
-                <li><a href="services.html">Servicios</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <li><a href="python.py">Hola mundo en Python</a></li>
+                <li><a href="https://github.com/DanielCopete3009/Programaci-n-1-DAW" target="_blank">Repositorio Unidad 1</a></li>
+                <li><a href="#">Ejercicio de variables</a></li>
+                <li><a href="#">Ejercicio de operadores</a></li>
             </ul>
         </section>
 
-        <section>
-            <h2>Mi Blog</h2>
-            <p></p>
-            <ul>
-              <li><a href="https://dcopjim.wordpress.com/" target="_blank">🌐 Ir a mi Blog en WordPress</a></li>
-            </ul>
+        <!-- Unidad 2 -->
+        <section id="unidad2">
+            <h2>Unidad 2 - Tipos de datos avanzados</h2>
+
+            <h3>Teoría</h3>
             <p>
-                La evolución de la web ha transformado radicalmente la forma en que interactuamos con la información y las personas.
-                Desde sus inicios como páginas estáticas en la Web 1.0, pasando por la interactividad y el contenido generado por usuarios
-                en la Web 2.0, hasta llegar a la Web 3.0, donde la inteligencia artificial y la descentralización juegan un papel fundamental.
+                En esta unidad trabajamos con arrays y expresiones regulares (regex).
             </p>
+
+            <h4>Arrays</h4>
+            <p>Un array almacena múltiples valores del mismo tipo.</p>
+            <pre><code># Array unidimensional en Python
+numeros = [10, 20, 30, 40]
+for n in numeros:
+    print(n)
+</code></pre>
+
+            <h4>Expresiones Regulares</h4>
+            <p>Regex permite buscar o validar patrones en cadenas de texto.</p>
+            <pre><code># Validación de email en Python
+import re
+
+correo = "usuario@ejemplo.com"
+if re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", correo):
+    print("Correo válido")
+else:
+    print("Correo no válido")
+</code></pre>
+
+            <h3>Ejercicios</h3>
+            <ul>
+                <li><a href="#">Ejercicio Arrays</a></li>
+                <li><a href="#">Ejercicio Matriz</a></li>
+                <li><a href="#">Ejercicio Regex</a></li>
+            </ul>
+        </section>
+
+        <!-- Sección de blog / enlaces adicionales -->
+        <section>
+            <h2>Blog y recursos</h2>
+            <ul>
+                <li><a href="https://dcopjim.wordpress.com/" target="_blank">Ir a mi Blog en WordPress</a></li>
+                <li><a href="#">Otros recursos</a></li>
+            </ul>
         </section>
     </main>
 
@@ -99,4 +165,5 @@
     </footer>
 </body>
 </html>
+
 
