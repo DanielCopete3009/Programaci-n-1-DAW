@@ -1,5 +1,6 @@
+#inicializamos la variable
 suma = 0
-
+#creamos el bucle cerrado
 for i in range(1, 101):
     suma += i
     if i < 100:
@@ -9,4 +10,5 @@ for i in range(1, 101):
   
 print("La suma de los nuemeros del 1 al 100 es:", suma )
     
+
 
