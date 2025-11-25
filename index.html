@@ -1,82 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Python - Daniel Copete</title>
+    <meta charset="UTF-8" />
+    <title>Portfolio de Python | Daniel Copete</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css"> 
 </head>
-
 <body>
+
     <header>
-        <h1>Mi Portfolio de Python</h1>
-        <p>Ejercicios y conceptos de programación</p>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Daniel Copete</h1>
+                <p>Portfolio de Python | Ejercicios y conceptos de programación</p>
+            </div>
+           <nav>
+                <ul>
+                    <li><a href="sobre_mi.html">Sobre mí</a></li>
+                    <li><a href="#temas">Portafolio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+           </nav>
+        </div>
     </header>
 
-    <main>
-        <!-- Unidad 1 -->
-        <section id="unidad1">
-            <h2>Unidad 1 - Conceptos básicos</h2>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Mi Portfolio</h2>
+            <p>En este portafolio encontrarás mis proyectos y ejercicios realizados en Python. Cada unidad agrupa diferentes tipos de ejercicios que muestran mis progresos y habilidades en programación.</p>
+        </div>
+    </section>
 
-            <h3>Teoría</h3>
-            <p>
-                Aquí explico algunos conceptos básicos
-            </p>
-             <li><a href="https://github.com/DanielCopete3009/Programaci-n-1-DAW/blob/main/ConceptosPython.md"> Teoría</a></li>
-            <li><a href="https://dcopjim.wordpress.com/wp-admin/post.php?post=29&action=edit">Presentación e historia de la programación</a></li>
-            <li><a href="https://dcopjim.wordpress.com/wp-admin/post.php?post=44&action=edit">Tabla comparativa de los lenguajes más conocidos</a></li>
-            <pre><code># Ejemplo de variables en Python
-nombre = "Ana"
-edad = 20
-print(f"{nombre} tiene {edad} años.")
-</code></pre>
+    <section id="temas" class="temas">
+        <div class="container tema-buttons">
+            <a href="https://github.com/DanielCopete3009/Programaci-n-1-DAW/tree/main/unidad1" class="tema-btn" target="_blank" rel="noopener noreferrer">
+                Unidad 1 - Conceptos
+            </a>
+            <a href="https://github.com/DanielCopete3009/Programaci-n-1-DAW/tree/main/Unidad2" class="tema-btn" target="_blank" rel="noopener noreferrer">
+                Unidad 2 - Arrays
+            </a>
+            </div>
+    </section>
 
-            <h3>Ejercicios</h3>
-            <ul>
-                <li><a href="https://github.com/DanielCopete3009/Programaci-n-1-DAW/tree/main/unidad1" target="_blank">Ejercicios Unidad 1</a></li>
-               
-            </ul>
-        </section>
-
-        <!-- Unidad 2 -->
-        <section id="unidad2">
-            <h2>Unidad 2 - Tipos de datos avanzados</h2>
-
-            <h3>Teoría</h3>
-            <p>
-                En esta unidad trabajamos con arrays.
-            </p>
-
-            <h4>Arrays</h4>
-            <p>Un array almacena múltiples valores del mismo tipo.</p>
-            <pre><code># Array unidimensional en Python
-numeros = [10, 20, 30, 40]
-for n in numeros:
-    print(n)
-</code></pre>
-...
-</code></pre>
-
-            <h3>Ejercicios</h3>
-            <ul>
-                <li><a href="https://github.com/DanielCopete3009/Programaci-n-1-DAW/tree/main/Unidad2">Ejercicio Arrays unidad 2</a></li>
-                
-        </section>
-
-        <!-- Sección de blog / enlaces adicionales -->
-        <section>
-            <h2>Blog y recursos</h2>
-            <ul>
-                <li><a href="https://dcopjim.wordpress.com/" target="_blank">Ir a mi Blog en WordPress</a></li>
-                <li><a href="#">Otros recursos</a></li>
-            </ul>
-        </section>
-    </main>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Si deseas saber más sobre mi trabajo o tienes alguna consulta, no dudes en contactarme.</p>
+            <a href="contacto.html" class="btn">Envíame un mensaje</a>
+        </div>
+    </section>
 
     <footer>
-        © 2025 Daniel Copete — Portfolio de Programación
-    </footer>
+    <div class="container">
+        <p>&copy; 2025 Daniel Copete. Todos los derechos reservados.</p>
+        <p>
+            Sígueme en 
+            <a href="https://github.com/DanielCopete3009" target="_blank" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://dcopjim.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog de WordPress</a>
+        </p>
+    </div>
+</footer>
+
 </body>
 </html>
 
