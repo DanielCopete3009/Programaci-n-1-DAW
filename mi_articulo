@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    
+    <title>Sobre Mí | Daniel Copete</title> 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1><a href="index.html" style="text-decoration: none; color: white;">Daniel Copete</a></h1>
+                <p>Portfolio de Python | Ejercicios y conceptos de programación</p>
+            </div>
+           <nav>
+                <ul>
+                    <li><a href="sobre_mi.html" style="color: #4dff91;">Sobre mí</a></li> 
+                    <li><a href="index.html#temas">Portafolio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+           </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about-article" class="about">
+            <div class="container">
+                
+                <h2>Sobre Mí</h2> 
+                
+                <div class="card-box about-box"> 
+                    <p>
+                        ¡Hola! Soy Daniel Copete, un estudiante de [Aquí pones tu Grado o Curso] 
+                        apasionado por la tecnología y la programación.
+                    </p>
+                    
+                    <p>
+                        Este portfolio es una colección de mi trabajo en Python, mostrando los 
+                        proyectos y ejercicios que he completado a lo largo de mi aprendizaje. 
+                        Me centro en escribir código limpio, eficiente y en encontrar soluciones 
+                        creativas a los problemas.
+                    </p>
+                    
+                    <p>
+                        Actualmente estoy profundizando en [Menciona alguna tecnología, ej: análisis 
+                        de datos con Pandas, desarrollo web con Flask, etc.] y siempre estoy 
+                        buscando nuevos desafíos para mejorar mis habilidades.
+                    </p>
+
+                    <p>
+                        Fuera de la programación, me gusta [Menciona un hobby, ej: el senderismo, 
+                        los videojuegos, la música, etc.].
+                    </p>
+                </div>
+                
+                <div class="back-link">
+                    <a href="index.html">&larr; Volver al inicio</a>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="container">
+        <p>&copy; 2025 Daniel Copete. Todos los derechos reservados.</p>
+        <p>
+            Sígueme en 
+            <a href="https://github.com/DanielCopete3009" target="_blank" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://dcopjim.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog de WordPress</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
