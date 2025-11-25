@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    
+    <title>Contacto | Daniel Copete</title> 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1><a href="index.html" style="text-decoration: none; color: white;">Daniel Copete</a></h1>
+                <p>Portfolio de Python | Ejercicios y conceptos de programación</p>
+            </div>
+           <nav>
+                <ul>
+                    <li><a href="sobre_mi.html">Sobre mí</a></li> 
+                    <li><a href="index.html#temas">Portafolio</a></li>
+                    <li><a href="contacto.html" style="color: #4dff91;">Contacto</a></li>
+                </ul>
+           </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact-page" class="contact">
+            <div class="container">
+                
+                <h2>Ponerse en Contacto</h2> 
+                <p>
+                    ¿Tienes alguna pregunta o propuesta? Rellena el formulario 
+                    y me pondré en contacto contigo.
+                </p>
+                
+                <div class="card-box contact-form"> 
+                    
+                    <form action="#" method="POST" class="form">
+                        
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                        </div>
+                        
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn">Enviar Mensaje</button>
+                        </div>
+                        
+                    </form>
+                </div>
+
+                <div class="back-link" style="text-align: center;">
+                    <a href="index.html">&larr; Volver al inicio</a>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="container">
+        <p>&copy; 2025 Daniel Copete. Todos los derechos reservados.</p>
+        <p>
+            Sígueme en 
+            <a href="https://github.com/DanielCopete3009" target="_blank" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://dcopjim.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog de WordPress</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
