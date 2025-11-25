@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Unidad 2 - Tipos Avanzados | Daniel Copete</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1><a href="index.html" style="text-decoration: none; color: white;">Daniel Copete</a></h1>
+                <p>Portfolio de Python | Ejercicios y conceptos de programación</p>
+            </div>
+           <nav>
+                <ul>
+                    <li><a href="sobre_mi.html">Sobre mí</a></li> 
+                    <li><a href="index.html#temas" style="color: #4dff91;">Portafolio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+           </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="teoria-unidad-2" class="about">
+            <div class="container">
+                
+                <h2>Unidad 2 - Tipos de datos avanzados</h2> 
+                
+                <div class="card-box about-box"> 
+                    
+                    <h3>Listas (Lists)</h3>
+                    <p>
+                        Las <strong>listas</strong> son el "array" principal de Python. Son colecciones ordenadas y <strong>mutables</strong> (se pueden cambiar). Se definen con corchetes `[]`.
+                    </p>
+                    <pre><code># Crear una lista
+frutas = ["manzana", "banana", "naranja"]
+
+# Acceder a un elemento (índice empieza en 0)
+print(frutas[0])  # Output: manzana
+
+# Añadir un elemento al final
+frutas.append("uva")
+
+# Recorrer la lista
+for f in frutas:
+    print(f)</code></pre>
+
+                    <hr style="border-color: #3a3f4a; margin: 25px 0;">
+
+                    <h3>Tuplas (Tuples)</h3>
+                    <p>
+                        Las <strong>tuplas</strong> son similares a las listas, pero son <strong>inmutables</strong> (no se pueden cambiar después de crearlas). Son más rápidas que las listas y se usan para datos que no deben modificarse. Se definen con paréntesis `()`.
+                    </p>
+                    <pre><code># Crear una tupla
+coordenadas = (10.0, 20.5)
+
+# Acceder a un elemento
+print(coordenadas[1])  # Output: 20.5
+
+# Desempaquetar una tupla
+x, y = coordenadas
+print(f"X es {x}, Y es {y}")
+
+# Esto daría un ERROR (son inmutables)
+# coordenadas.append(30.0) 
+# coordenadas[0] = 5.0</code></pre>
+
+                    <hr style="border-color: #3a3f4a; margin: 25px 0;">
+
+                    <h3>Diccionarios (Dictionaries)</h3>
+                    <p>
+                        Los <strong>diccionarios</strong> son colecciones no ordenadas (en versiones antiguas de Python) que almacenan datos en pares de <strong>clave-valor</strong>. Son extremadamente útiles para organizar datos. Se definen con llaves `{}`.
+                    </p>
+                    <pre><code># Crear un diccionario
+alumno = {
+    "nombre": "Daniel",
+    "edad": 20,
+    "curso": "DAW"
+}
+
+# Acceder a un valor usando su clave
+print(alumno["nombre"])  # Output: Daniel
+
+# Añadir un nuevo par clave-valor
+alumno["nota"] = 9.5
+print(alumno)
+
+# Recorrer un diccionario
+for clave, valor in alumno.items():
+    print(f"{clave}: {valor}")</code></pre>
+
+                </div>
+                
+                <div style="text-align: center; margin-top: 35px; margin-bottom: 20px;">
+                    <a href="https://github.com/DanielCopete3009/Programaci-n-1-DAW/tree/main/Unidad2" class="btn" target="_blank" rel="noopener noreferrer">
+                        Ver Ejercicios de la Unidad 2
+                    </a>
+                </div>
+
+                <div class="back-link" style="text-align: center;">
+                    <a href="index.html#temas">&larr; Volver al portafolio</a>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="container">
+        <p>&copy; 2025 Daniel Copete. Todos los derechos reservados.</p>
+        <p>
+            Sígueme en 
+            <a href="https://github.com/DanielCopete3009" target="_blank" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://dcopjim.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog de WordPress</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
