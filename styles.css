@@ -255,3 +255,28 @@ footer p {
   margin-top: 10px;
   font-size: 0.95rem;
 }
+
+/* ====== ESTILOS PARA BLOQUES DE CÓDIGO ====== */
+/* * Esto estiliza el bloque <pre> para que coincida
+ * con el fondo de los inputs y el borde sutil.
+*/
+pre {
+  background-color: #1a1d24; /* Fondo del color del body */
+  border: 1px solid #3a3f4a; /* Borde sutil */
+  padding: 18px;
+  border-radius: 8px;
+  overflow-x: auto; /* Permite scroll horizontal si el código es largo */
+  margin: 20px 0;
+}
+
+/* * Esto estiliza el <code> dentro del <pre>
+*/
+pre code {
+  font-family: 'Courier New', Courier, monospace; /* Fuente de código */
+  color: #e0e0e0; /* Color de texto claro */
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+
