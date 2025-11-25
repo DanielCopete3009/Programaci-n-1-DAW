@@ -2,10 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <title>Unidad 2 - Tipos Avanzados | Daniel Copete</title> 
+    
+    <title>Unidad 4 - Arrays y Cadenas | Daniel Copete</title> 
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
@@ -18,7 +20,7 @@
            <nav>
                 <ul>
                     <li><a href="sobre_mi.html">Sobre mí</a></li> 
-                    <li><a href="index.html#temas" style="color: #4dff91;">Portafolio</a></li>
+                    <li><a href="index.html#temas" styles="color: #4dff91;">Portafolio</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
            </nav>
@@ -26,83 +28,201 @@
     </header>
 
     <main>
-        <section id="teoria-unidad-2" class="about">
+        <section id="teoria-unidad-4" class="about">
             <div class="container">
                 
-                <h2>Unidad 2 - Tipos de datos avanzados</h2> 
+                <h2>Unidad 4 - Arrays y Cadenas de Caracteres</h2> 
                 
                 <div class="card-box about-box"> 
                     
-                    <h3>Listas (Lists)</h3>
+                    <h3>I. Introducción a las Estructuras de Datos</h3>
                     <p>
-                        Las <strong>listas</strong> son el "array" principal de Python. Son colecciones ordenadas y <strong>mutables</strong> (se pueden cambiar). Se definen con corchetes `[]`.
+                        [cite_start]Las <strong>variables escalares</strong> (como `edad = 6`) solo pueden almacenar un valor a la vez[cite: 162, 163, 164].
                     </p>
-                    <pre><code># Crear una lista
-frutas = ["manzana", "banana", "naranja"]
-
-# Acceder a un elemento (índice empieza en 0)
-print(frutas[0])  # Output: manzana
-
-# Añadir un elemento al final
-frutas.append("uva")
-
-# Recorrer la lista
-for f in frutas:
-    print(f)</code></pre>
+                    <p>
+                        [cite_start]Las estructuras de datos, como las <strong>tablas</strong> o <strong>arrays</strong>, permiten almacenar múltiples valores en una sola variable[cite: 170]. Se clasifican en:
+                    </p>
+                    <ul>
+                        [cite_start]<li><strong>Arrays (Estáticas):</strong> Tienen un tamaño fijo y sus elementos son homogéneos (todos del mismo tipo)[cite: 177].</li>
+                        [cite_start]<li><strong>Listas (Dinámicas):</strong> Tienen un tamaño variable[cite: 179].</li>
+                    </ul>
 
                     <hr style="border-color: #3a3f4a; margin: 25px 0;">
 
-                    <h3>Tuplas (Tuples)</h3>
+                    <h3>II. Arrays (Listas en Python)</h3>
                     <p>
-                        Las <strong>tuplas</strong> son similares a las listas, pero son <strong>inmutables</strong> (no se pueden cambiar después de crearlas). Son más rápidas que las listas y se usan para datos que no deben modificarse. Se definen con paréntesis `()`.
+                        Un <strong>array</strong> es una estructura que almacena un conjunto de elementos de un mismo tipo. [cite_start]Se accede a ellos mediante un <strong>índice</strong>[cite: 215].
                     </p>
-                    <pre><code># Crear una tupla
-coordenadas = (10.0, 20.5)
+                    <ul>
+                        [cite_start]<li>El índice siempre comienza en <strong>0</strong>[cite: 216].</li>
+                        [cite_start]<li>El último índice es <strong>N-1</strong> (donde N es el número total de elementos)[cite: 217].</li>
+                    </ul>
+                    <p>
+                        En Python, no existen los arrays tradicionales. [cite_start]En su lugar, <strong>se implementan usando listas</strong>[cite: 225]. [cite_start]Las listas de Python son <strong>mutables</strong> (su contenido puede modificarse) y ordenadas[cite: 228, 229].
+                    </p>
 
-# Acceder a un elemento
-print(coordenadas[1])  # Output: 20.5
+                    <h4>Declaración e Inicialización</h4>
+                    <pre><code># Lista con elementos
+[cite_start]mi_array = [10, 20, 30, 40] [cite: 236]
 
-# Desempaquetar una tupla
-x, y = coordenadas
-print(f"X es {x}, Y es {y}")
+# Lista vacía
+[cite_start]otra_lista = [] [cite: 238]
 
-# Esto daría un ERROR (son inmutables)
-# coordenadas.append(30.0) 
-# coordenadas[0] = 5.0</code></pre>
+# Pre-asignación (ej: 5 ceros)
+[cite_start]ceros = [0] * 5 [cite: 239]</code></pre>
+
+                    <h4>Acceso y Modificación por Índice</h4>
+                    [cite_start]<p>Se usa el índice (de 0 a N-1) para acceder o cambiar elementos[cite: 245].</p>
+                    <pre><code>mi_array = [22, 8, 97, 3]
+
+# Acceso (primer elemento)
+[cite_start]print(mi_array[0]) # Output: 22 [cite: 247]
+
+# Modificación
+[cite_start]mi_array[2] = 100 # Cambia el 97 por 100 [cite: 249]
+
+# Acceso Negativo (último elemento)
+[cite_start]print(mi_array[-1]) # Output: 3 [cite: 251]</code></pre>
+
+                    <h4>Recorrido: Bucles y Listas</h4>
+                    <pre><code># 1. Recorrido por índice (tradicional)
+for i in range(len(mi_array)):
+    [cite_start]print(mi_array[i]) [cite: 271, 272]
+
+# 2. Recorrido por elemento (for-each)
+for elemento in mi_array:
+    [cite_start]print(elemento) [cite: 273, 275]</code></pre>
+
+                    <h4>Operaciones y Métodos Básicos</h4>
+                    <ul>
+                        [cite_start]<li><strong>Slice (División):</strong> Extrae una sub-lista usando `lista[inicio:fin:paso]`[cite: 380]. [cite_start]`fin` no se incluye[cite: 384].</li>
+                        [cite_start]<li><strong>`append(x)`:</strong> Añade un elemento `x` al final de la lista[cite: 278, 418].</li>
+                        [cite_start]<li><strong>`insert(i, x)`:</strong> Inserta el elemento `x` en la posición (índice) `i`[cite: 284, 434].</li>
+                        [cite_start]<li><strong>`extend(otra_lista)`:</strong> Añade todos los elementos de `otra_lista` al final[cite: 453, 461].</li>
+                        <li><strong>`remove(x)`:</strong> Elimina la primera ocurrencia del valor `x`. [cite_start]No devuelve nada[cite: 289, 477, 478].</li>
+                        <li><strong>`pop(i)`:</strong> Elimina el elemento en el índice `i` y lo devuelve. [cite_start]Si `i` está vacío, elimina y devuelve el último[cite: 291, 504, 513, 515].</li>
+                    </ul>
+
+                    <h4>Operaciones Avanzadas</h4>
+                    <ul>
+                        <li><strong>Búsqueda (Python):</strong>
+                            <ul>
+                                <li><strong>`in` (Operador):</strong> Comprueba si un elemento existe. [cite_start]`if "Ana" in lista:`[cite: 648, 650].</li>
+                                <li><strong>`.index(x)` (Método):</strong> Devuelve el índice de `x`. [cite_start]Da error si no lo encuentra (usar `try...except`)[cite: 648, 655, 657].</li>
+                            </ul>
+                        </li>
+                        <li><strong>Ordenación:</strong>
+                            <ul>
+                                [cite_start]<li><strong>`.sort()`:</strong> Modifica la lista original (la ordena "in-place")[cite: 694].</li>
+                                [cite_start]<li><strong>`sorted(lista)`:</strong> Devuelve una <strong>nueva</strong> lista ordenada, dejando la original intacta[cite: 695].</li>
+                            </ul>
+                        </li>
+                        <li><strong>Comparación (`==`):</strong>
+                            <ul>
+                                <li>Compara si dos listas son idénticas. [cite_start]Deben tener la misma longitud y los mismos elementos en el mismo orden[cite: 775, 777, 779].</li>
+                            </ul>
+                        </li>
+                        <li><strong>Copia de Arrays:</strong>
+                            <ul>
+                                [cite_start]<li><strong>Forma Errónea:</strong> `lista_b = lista_a` NO es una copia[cite: 844]. Es solo otro nombre (una referencia). [cite_start]Si modificas `lista_b`, también cambias `lista_a`[cite: 844, 868].</li>
+                                <li><strong>Forma Correcta:</strong> `lista_b = lista_a.copy()` o `lista_b = lista_a[:]` (usando slicing). [cite_start]Esto crea una copia real[cite: 874, 875].</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4>Arrays de Dos Dimensiones (Matrices)</h4>
+                    <ul>
+                        [cite_start]<li><strong>Concepto:</strong> Una tabla con filas y columnas[cite: 912]. [cite_start]En Python, se implementa como <strong>listas anidadas</strong> (una lista que contiene otras listas)[cite: 913].</li>
+                        [cite_start]<li><strong>Creación:</strong> `matriz = [ [1, 2, 3], [4, 5, 6], [7, 8, 9] ]`[cite: 918, 921, 922, 924].</li>
+                        [cite_start]<li><strong>Acceso:</strong> Se usan dos índices: `matriz[fila][columna]`[cite: 936]. (Ej: `matriz[1][2]` sería 6) [cite_start][cite: 938, 959].</li>
+                        <li><strong>Recorrido:</strong> Se usan dos bucles `for` anidados. [cite_start]El exterior para las filas y el interior para las columnas (elementos)[cite: 975].</li>
+                    </ul>
 
                     <hr style="border-color: #3a3f4a; margin: 25px 0;">
 
-                    <h3>Diccionarios (Dictionaries)</h3>
+                    <h3>III. Cadenas de Caracteres (Strings)</h3>
                     <p>
-                        Los <strong>diccionarios</strong> son colecciones no ordenadas (en versiones antiguas de Python) que almacenan datos en pares de <strong>clave-valor</strong>. Son extremadamente útiles para organizar datos. Se definen con llaves `{}`.
+                        [cite_start]Una cadena es una secuencia de caracteres (letras, números, símbolos)[cite: 1075].
                     </p>
-                    <pre><code># Crear un diccionario
-alumno = {
-    "nombre": "Daniel",
-    "edad": 20,
-    "curso": "DAW"
-}
+                    <p>
+                        [cite_start]<strong>Concepto Clave:</strong> Las cadenas son <strong>INMUTABLES</strong>[cite: 1088]. Una vez creadas, no se puede cambiar un carácter individual. [cite_start]Cualquier "modificación" (como un `.replace()`) crea una cadena completamente nueva[cite: 1089].
+                    </p>
+                    <p>
+                        [cite_start]Se crean con comillas simples (`' '`), dobles (`" "`) [cite: 1079] [cite_start]o triples (`""" """`) para multilínea[cite: 1082].
+                    </p>
+                    
+                    <h4>Indexación y Slicing</h4>
+                    <p>
+                        Funciona igual que en las listas.
+                    </p>
+                    <ul>
+                        [cite_start]<li><strong>Índice:</strong> `cadena[0]` (primera letra) [cite: 1097][cite_start], `cadena[-1]` (última letra)[cite: 1098].</li>
+                        [cite_start]<li><strong>Slicing:</strong> `cadena[inicio:fin:paso]`[cite: 1115]. (Ej: `cadena[0:5]` extrae los primeros 5 caracteres) [cite_start][cite: 1126].</li>
+                        [cite_start]<li><strong>Invertir:</strong> `cadena[::-1]`[cite: 1139].</li>
+                    </ul>
 
-# Acceder a un valor usando su clave
-print(alumno["nombre"])  # Output: Daniel
+                    <h4>Operaciones Básicas</h4>
+                    <ul>
+                        <li><strong>Concatenación (`+`):</strong> Une cadenas. [cite_start]`"Hola" + " " + "Mundo"`[cite: 1143].</li>
+                        <li><strong>Repetición (`*`):</strong> Repite la cadena. [cite_start]`"-" * 10` (crea 10 guiones)[cite: 1152].</li>
+                        [cite_start]<li><strong>Longitud (`len(cadena)`):</strong> Devuelve el número de caracteres[cite: 1155].</li>
+                    </ul>
 
-# Añadir un nuevo par clave-valor
-alumno["nota"] = 9.5
-print(alumno)
+                    <h4>Métodos Principales</h4>
+                    <ul>
+                        [cite_start]<li><strong>`.lower()` / `.upper()`:</strong> Convierten a minúsculas o mayúsculas[cite: 1161].</li>
+                        [cite_start]<li><strong>`.strip()`:</strong> Elimina espacios en blanco al inicio y al final[cite: 1161].</li>
+                        [cite_start]<li><strong>`.replace(a, b)`:</strong> Reemplaza todas las `a` por `b`[cite: 1161].</li>
+                        [cite_start]<li><strong>`.split(separador)`:</strong> Divide la cadena en una <strong>lista</strong>[cite: 1161]. (Ej: `"a,b,c".split(',')[cite_start]` da `['a', 'b', 'c']`)[cite: 1161].</li>
+                        [cite_start]<li><strong>`.join(iterable)`:</strong> Une los elementos de una lista en <strong>una sola cadena</strong>[cite: 1161]. (Ej: `"-".join(['a', 'b'])[cite_start]` da `"a-b"`)[cite: 1161].</li>
+                        [cite_start]<li><strong>`.find(sub)`:</strong> Devuelve el índice de la subcadena `sub` (o -1 si no la encuentra)[cite: 1161].</li>
+                        [cite_start]<li><strong>`.startswith(sub)`:</strong> Devuelve `True` si la cadena empieza con `sub`[cite: 1161].</li>
+                    </ul>
 
-# Recorrer un diccionario
-for clave, valor in alumno.items():
-    print(f"{clave}: {valor}")</code></pre>
+                    <h4>Formato de Cadenas (f-strings)</h4>
+                    <p>
+                        [cite_start]Es la forma moderna y recomendada[cite: 1167]. [cite_start]Se usa una `f` antes de las comillas y las variables se ponen entre llaves `{}`[cite: 1168].
+                    </p>
+                    <pre><code>producto = "Laptop"
+precio = 850.50
+[cite_start]mensaje = f"El {producto} cuesta ${precio:.2f}." [cite: 1169, 1170]
+# [cite_start]Salida: El Laptop cuesta $850.50. [cite: 1171]</code></pre>
 
+                    <hr style="border-color: #3a3f4a; margin: 25px 0;">
+
+                    <h3>IV. Expresiones Regulares (RegEx)</h3>
+                    <p>
+                        [cite_start]Las Expresiones Regulares (o RegEx) son <strong>patrones de búsqueda</strong>[cite: 1246]. [cite_start]Son un mini-lenguaje universal para buscar y manipular texto[cite: 1246].
+                    </p>
+                    [cite_start]<p>En Python, se usa el módulo `re`[cite: 1247]. [cite_start]Se recomienda usar "raw strings" (con una `r` antes de las comillas) para los patrones[cite: 1302].</p>
+
+                    <h4>Funciones Principales del Módulo `re`</h4>
+                    <ul>
+                        [cite_start]<li><strong>`re.search(patron, texto)`:</strong> Busca el patrón en cualquier parte del texto[cite: 1272].</li>
+                        [cite_start]<li><strong>`re.findall(patron, texto)`:</strong> Encuentra <strong>todas</strong> las coincidencias y las devuelve como una lista[cite: 1274].</li>
+                        [cite_start]<li><strong>`re.match(patron, texto)`:</strong> Solo busca si el patrón coincide al <strong>inicio</strong> del texto[cite: 1275].</li>
+                    </ul>
+
+                    <h4>Patrones Básicos (Comodines)</h4>
+                    <ul>
+                        [cite_start]<li><strong>`.` (Punto):</strong> Cualquier carácter (excepto salto de línea)[cite: 1281].</li>
+                        [cite_start]<li><strong>`\d` (Dígito):</strong> Cualquier dígito del 0 al 9[cite: 1281].</li>
+                        [cite_start]<li><strong>`\w` (Word):</strong> Cualquier carácter de palabra (letras, números, guion bajo)[cite: 1281].</li>
+                        [cite_start]<li><strong>`\s` (Space):</strong> Cualquier espacio en blanco (espacio, tabulador, etc.)[cite: 1281].</li>
+                        [cite_start]<li><strong>`\D`, `\W`, `\S` (Mayúsculas):</strong> Son la negación de los anteriores (No-Dígito, No-Palabra, No-Espacio)[cite: 1282].</li>
+                    </ul>
+                    
+                    <h4>Cuantificadores (¿Cuántas veces?)</h4>
+                    <ul>
+                        [cite_start]<li><strong>`*` (Asterisco):</strong> <strong>Cero o más</strong> veces[cite: 1285].</li>
+                        [cite_start]<li><strong>`+` (Más):</strong> <strong>Una o más</strong> veces[cite: 1285].</li>
+                        [cite_start]<li><strong>`?` (Interrogación):</strong> <strong>Cero o una</strong> vez (hace que sea opcional)[cite: 1285].</li>
+                        <li><strong>`{n}` (Llaves):</strong> Exactamente `n` veces. (Ej: `\d{4}` busca 4 dígitos) [cite_start][cite: 1285, 1293].</li>
+                        [cite_start]<li><strong>`{n,m}` (Llaves):</strong> Un rango, entre `n` y `m` veces[cite: 1285].</li>
+                    </ul>
                 </div>
                 
-                <div style="text-align: center; margin-top: 35px; margin-bottom: 20px;">
-                    <a href="https://github.com/DanielCopete3009/Programaci-n-1-DAW/tree/main/Unidad2" class="btn" target="_blank" rel="noopener noreferrer">
-                        Ver Ejercicios de la Unidad 2
-                    </a>
-                </div>
-
-                <div class="back-link" style="text-align: center;">
+                <div class="back-link" style="text-align: center; margin-top: 20px;">
                     <a href="index.html#temas">&larr; Volver al portafolio</a>
                 </div>
                 
