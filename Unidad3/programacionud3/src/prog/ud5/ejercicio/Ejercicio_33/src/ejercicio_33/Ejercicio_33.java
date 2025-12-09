@@ -6,7 +6,12 @@ public class Ejercicio_33 {
 
     // Función que devuelve el máximo entre dos números enteros
     public static int maximo(int a, int b) {
-        return (a > b) ? a : b;
+            if (a > b) {
+                       return a;
+            } else {
+                    return b;
+            }
+
     }
 
     // Función  que devuelve el máximo entre tres números enteros
