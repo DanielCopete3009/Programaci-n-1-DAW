@@ -1,5 +1,5 @@
 package Unidad3_eclipse;
 
-public class pruebav2 {
+public class Ejercicio8 {
 
 }
