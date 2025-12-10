@@ -1,20 +1,55 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package ejercicio_19;
 
-/**
- *
- * @author 06_1DAW_Alum
- */
+import java.util.Scanner;
+
 public class Ejercicio_19 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Introduce el primer número: ");
+        int num1 = sc.nextInt();
+
+        System.out.print("Introduce el segundo número: ");
+        int num2 = sc.nextInt();
+
+        System.out.print("Introduce el tercer número: ");
+        int num3 = sc.nextInt();
+
+        int mayor, medio, menor;
+
+        // Determinar el mayor
+        if (num1 >= num2 && num1 >= num3) {
+            mayor = num1;
+            if (num2 >= num3) {
+                medio = num2;
+                menor = num3;
+            } else {
+                medio = num3;
+                menor = num2;
+            }
+        } else if (num2 >= num1 && num2 >= num3) {
+            mayor = num2;
+            if (num1 >= num3) {
+                medio = num1;
+                menor = num3;
+            } else {
+                medio = num3;
+                menor = num1;
+            }
+        } else {
+            mayor = num3;
+            if (num1 >= num2) {
+                medio = num1;
+                menor = num2;
+            } else {
+                medio = num2;
+                menor = num1;
+            }
+        }
+
+        System.out.println("Números ordenados de mayor a menor: " + mayor + ", " + medio + ", " + menor);
     }
-    
 }
+

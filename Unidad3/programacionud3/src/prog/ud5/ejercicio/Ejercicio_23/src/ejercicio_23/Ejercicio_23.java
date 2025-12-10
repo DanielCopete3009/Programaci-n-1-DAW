@@ -1,20 +1,36 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package ejercicio_23;
 
-/**
- *
- * @author 06_1DAW_Alum
- */
+import java.util.Scanner;
+
 public class Ejercicio_23 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Scanner sc = new Scanner(System.in);
+
+        // Generar números aleatorios a y b (pueden estar en cualquier orden)
+        int a = (int) (Math.random() * 100);  // Entre 0 y 99
+        int b = (int) (Math.random() * 100);  // Entre 0 y 99
+
+        // Normalizar para que a sea el menor y b el mayor
+        int min = Math.min(a, b);
+        int max = Math.max(a, b);
+
+        int num;
+
+        do {
+            System.out.print("Introduce un número entero: ");
+            num = sc.nextInt();
+
+            if (num >= min && num <= max) {
+                System.out.println("¡Correcto! El número está dentro del rango [" + min + ", " + max + "].");
+            } else {
+                System.out.println("Número fuera del rango. Intenta de nuevo.");
+            }
+
+        } while (num < min || num > max);
+
+        System.out.println("Número introducido: " + num);
     }
-    
 }
+

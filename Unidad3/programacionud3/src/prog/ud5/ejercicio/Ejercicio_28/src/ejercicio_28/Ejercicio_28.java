@@ -1,20 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package ejercicio_28;
 
-/**
- *
- * @author 06_1DAW_Alum
- */
+import java.util.Scanner;
+
 public class Ejercicio_28 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Introduce un número: ");
+        int n = sc.nextInt();
+
+        long factorial = 1;
+
+        // Calculamos el factorial
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
+        }
+
+        System.out.println("El factorial de " + n + " es: " + factorial);
     }
-    
 }
+

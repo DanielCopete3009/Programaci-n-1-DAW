@@ -1,20 +1,43 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package ejercicio_24;
 
-/**
- *
- * @author 06_1DAW_Alum
- */
+import java.util.Scanner;
+
 public class Ejercicio_24 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Scanner sc = new Scanner(System.in);
+
+        int edad;
+        int edadMin = Integer.MAX_VALUE;  // Inicializamos con el máximo valor posible
+        int edadMax = Integer.MIN_VALUE;  // Inicializamos con el mínimo valor posible
+
+        System.out.println("Introduce las edades de los alumnos (termina con -1):");
+
+        while (true) {
+            edad = sc.nextInt();
+
+            if (edad == -1) {
+                break;  // Salir del bucle si se introduce -1
+            }
+
+            // Actualizar mínimo y máximo
+            if (edad < edadMin) {
+                edadMin = edad;
+            }
+
+            if (edad > edadMax) {
+                edadMax = edad;
+            }
+        }
+
+        // Comprobar si se introdujo alguna edad válida
+        if (edadMin == Integer.MAX_VALUE || edadMax == Integer.MIN_VALUE) {
+            System.out.println("No se introdujeron edades válidas.");
+        } else {
+            System.out.println("Edad mínima: " + edadMin);
+            System.out.println("Edad máxima: " + edadMax);
+        }
     }
-    
 }
+
