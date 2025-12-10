@@ -1,20 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package ejercicio_5;
 
-/**
- *
- * @author 06_1DAW_Alum
- */
+import java.util.Scanner;
+
 public class Ejercicio_5 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Introduce la primera nota (entera): ");
+        int nota1 = sc.nextInt();
+
+        System.out.print("Introduce la segunda nota (entera): ");
+        int nota2 = sc.nextInt();
+
+        double media = (nota1 + nota2) / 2.0;
+
+        System.out.println("La media es: " + media);
+
+        // sc.close();  // No es necesario si no lo habéis dado aún
     }
-    
 }
+
