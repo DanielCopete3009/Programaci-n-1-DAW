@@ -1,20 +1,32 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package ejercicio_14;
 
-/**
- *
- * @author 06_1DAW_Alum
- */
+import java.util.Scanner;
+
 public class Ejercicio_14 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Introduce la nota del primer trimestre (entera): ");
+        int nota1 = sc.nextInt();
+
+        System.out.print("Introduce la nota del segundo trimestre (entera): ");
+        int nota2 = sc.nextInt();
+
+        System.out.print("Introduce la nota del tercer trimestre (entera): ");
+        int nota3 = sc.nextInt();
+
+        // Calcular nota media como double para decimales
+        double media = (nota1 + nota2 + nota3) / 3.0;
+
+        // Mostrar solo parte entera (casteando a int)
+        int mediaEntera = (int) media;
+
+        System.out.println("Nota media (boletín - parte entera): " + mediaEntera);
+        System.out.println("Nota media (expediente - con decimales): " + media);
+
+        sc.close();
     }
-    
 }
+

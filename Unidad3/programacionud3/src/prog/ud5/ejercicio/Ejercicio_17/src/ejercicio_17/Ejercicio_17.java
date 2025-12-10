@@ -1,20 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package ejercicio_17;
 
-/**
- *
- * @author 06_1DAW_Alum
- */
+import java.util.Scanner;
+
 public class Ejercicio_17 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Introduce el primer número entero: ");
+        int num1 = sc.nextInt();
+
+        System.out.print("Introduce el segundo número entero: ");
+        int num2 = sc.nextInt();
+
+        if (num1 == num2) {
+            System.out.println("Los números son iguales.");
+        } else {
+            System.out.println("Los números no son iguales.");
+            if (num1 > num2) {
+                System.out.println("El mayor es: " + num1);
+            } else {
+                System.out.println("El mayor es: " + num2);
+            }
+        }
     }
-    
 }
+
