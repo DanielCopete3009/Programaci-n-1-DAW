@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    
+    <title>Unidad 3 - Java | Daniel Copete</title> 
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1><a href="index.html" style="text-decoration: none; color: white;">Daniel Copete</a></h1>
+                <p>Portfolio de Java | Ejercicios y conceptos de programación</p>
+            </div>
+           <nav>
+                <ul>
+                    <li><a href="sobre_mi.html">Sobre mí</a></li> 
+                    <li><a href="index.html#temas" style="color: #4dff91;">Portafolio</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+           </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="teoria-unidad-3" class="about">
+            <div class="container">
+                
+                <h2>Unidad 3 - Fundamentos de Java</h2> 
+                
+                <div class="card-box about-box"> 
+                    
+                    <h3>I. Introducción a Java</h3>
+                    <p>
+                        [cite_start]Java es un lenguaje de programación <strong>orientado a objetos</strong> y <strong>plataforma independiente</strong>[cite: 101, 102]. 
+                        Esto significa que los programas Java pueden ejecutarse en cualquier sistema con la Máquina Virtual de Java (JVM).[cite: 103].
+                    </p>
+                    <p>
+                        [cite_start]Su sintaxis está basada en C/C++, pero simplificada y más segura[cite: 105].
+                    </p>
+
+                    <hr style="border-color: #3a3f4a; margin: 25px 0;">
+
+                    <h3>II. Variables y Tipos de Datos</h3>
+                    <p>
+                        [cite_start]Las variables almacenan datos y deben declararse con un <strong>tipo específico</strong>[cite: 115].
+                    </p>
+                    <ul>
+                        [cite_start]<li><strong>Tipos primitivos:</strong> `int`, `double`, `float`, `char`, `boolean`[cite: 116].</li>
+                        [cite_start]<li><strong>Tipos referencia:</strong> Objetos como `String`, arrays y clases personalizadas[cite: 118].</li>
+                    </ul>
+                    <p>
+                        [cite_start]Ejemplo de declaración e inicialización:[cite: 120]
+                    </p>
+                    <pre><code>// Variable entera
+int edad = 20;
+
+// Variable decimal
+double precio = 99.99;
+
+// Cadena de texto
+String nombre = "Daniel";</code></pre>
+
+                    <h4>Constantes</h4>
+                    [cite_start]<p>Se declaran con `final` y su valor no puede cambiar:</p>
+                    <pre><code>final double PI = 3.1416;</code></pre>
+
+                    <h3>III. Operadores</h3>
+                    <ul>
+                        [cite_start]<li><strong>Aritméticos:</strong> `+`, `-`, `*`, `/`, `%`[cite: 145].</li>
+                        [cite_start]<li><strong>Relacionales:</strong> `==`, `!=`, `>`, `<`, `>=`, `<=`[cite: 146].</li>
+                        [cite_start]<li><strong>Lógicos:</strong> `&&`, `||`, `!`[cite: 147].</li>
+                        [cite_start]<li><strong>Asignación:</strong> `=`, `+=`, `-=`, `*=`, `/=`[cite: 148].</li>
+                    </ul>
+
+                    <h3>IV. Estructuras de Control</h3>
+                    <h4>Condicionales</h4>
+                    <pre><code>int numero = 10;
+
+if (numero > 0) {
+    [cite_start]System.out.println("Positivo"); [cite: 165]
+} else if (numero < 0) {
+    System.out.println("Negativo");
+} else {
+    System.out.println("Cero");
+}</code></pre>
+
+                    <h4>Bucles</h4>
+                    <pre><code>// Bucle for
+for (int i = 0; i < 5; i++) {
+    [cite_start]System.out.println(i); [cite: 172]
+}
+
+// Bucle while
+int j = 0;
+while (j < 5) {
+    System.out.println(j);
+    j++;
+}
+
+// Bucle do-while
+int k = 0;
+do {
+    System.out.println(k);
+    k++;
+} while (k < 5);</code></pre>
+
+                    <h3>V. Arreglos (Arrays)</h3>
+                    <p>
+                        [cite_start]Los arrays son estructuras de datos que almacenan elementos del mismo tipo[cite: 190]. Se accede a ellos mediante un índice comenzando en 0.
+                    </p>
+                    <pre><code>// Declaración e inicialización
+int[] numeros = {1, 2, 3, 4, 5};
+
+// Acceso y modificación
+numeros[2] = 10; // cambia el 3 por 10
+
+// Recorrido
+for (int i = 0; i < numeros.length; i++) {
+    [cite_start]System.out.println(numeros[i]); [cite: 198]
+}</code></pre>
+
+                    <h3>VI. Métodos</h3>
+                    <p>
+                        [cite_start]Los métodos permiten encapsular código que puede reutilizarse y recibir parámetros[cite: 220].
+                    </p>
+                    <pre><code>public static int suma(int a, int b) {
+    [cite_start]return a + b; [cite: 222]
+}
+
+// Llamada
+int resultado = suma(5, 3);</code></pre>
+
+                    <h3>VII. Clases y Objetos</h3>
+                    <p>
+                        [cite_start]Java es orientado a objetos, por lo que todo gira alrededor de <strong>clases</strong> y <strong>objetos</strong>[cite: 250].
+                    </p>
+                    <pre><code>public class Persona {
+    String nombre;
+    int edad;
+
+    // Constructor
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // Método
+    public void saludar() {
+        [cite_start]System.out.println("Hola, soy " + nombre); [cite: 257]
+    }
+}
+
+// Crear objeto
+Persona p = new Persona("Daniel", 20);
+p.saludar();</code></pre>
+
+                    <div class="back-link" style="text-align: center; margin-top: 20px;">
+                        <a href="index.html#temas">&larr; Volver al portafolio</a>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <div class="container">
+        <p>&copy; 2025 Daniel Copete. Todos los derechos reservados.</p>
+        <p>
+            Sígueme en 
+            <a href="https://github.com/DanielCopete3009" target="_blank" rel="noopener noreferrer">GitHub</a> |
+            <a href="https://dcopjim.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog de WordPress</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
